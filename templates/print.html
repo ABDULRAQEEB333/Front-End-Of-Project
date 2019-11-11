@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0px;
+  width: 50%;
+  height: 50%;
+  size: 500px;
+  background-size: 100%;
+}
+
+</style>
+    <div style = "text-align: center;width: 100%;margin-bottom: 34%;">
+            <h2>Patient Name : {{post[0]}}</h2>
+            <p>Patient Age : {{post[1]}}</p>
+            <p>Doctor : {{post[2]}} </p>
+            <p>Room : {{post[3]}}</p>
+            <!-- <p style="background-image: image({{image}});">image : {{image}} </p> -->
+            <!-- <img src = "Patient42301-9868798-3.png" alt = "QR Code " class="img"> -->
+            <div class = "img" style="background-image: url(  '{{ url_for('static',filename ='Patient42301-9868798-3.png') }}'   );">
+
+            </div>
+
+        </div>
+
+
+<!-- <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="appointment-image-holder">
+            <figure>
+                <img src="{{ url_for('static',filename ='Patient{{cnic}}.png') }}" alt="Appointment">
+            </figure>
+        </div>                       
+    </div> -->
+
+{% endblock %}
